@@ -25,7 +25,7 @@ jobs:
       run:  |
            cd funct{{github.sha}}.zip .
     - name: Archive artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
          name: zipped-bundle
          path: ${{ github.sha }}.zip
