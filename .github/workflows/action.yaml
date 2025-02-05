@@ -1,4 +1,4 @@
-name: Deploy my Lamda Function 1
+name: Deploy my Lamda Function 1#
 
 on:
   push:
