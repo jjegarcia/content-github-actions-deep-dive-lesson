@@ -102,9 +102,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_ACG_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy to Lambda
-        run: |
-          aws lambda update-function-code \ 
-          --function-name acg-function \ 
-          --s3-bucket acg-secrets \ 
-          --s3-key ${{ github.sha }}.zip \
-          --publish
+        run:
+            aws lambda update-function-code \
+            --function-name acg-function \
+            --s3-bucket acg-secrets \
+            --s3-key ${{ github.sha }}.zip \
+            --publish
+#          aws lambda update-function-code \
+#          --function-name acg-function \
+#          --s3-bucket acg-secrets \
+#          --s3-key ${{ github.sha }}.zip \
+#          --publish
