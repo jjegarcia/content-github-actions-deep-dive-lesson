@@ -86,4 +86,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_ACG_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Upload artifact to S3
-        run: aws s3 cp ${{ github.workspace }}/${{ github.sha }}.zip s3://arn:aws:s3:::acg-secrets/${{ github.sha }}.zip
+        run: aws s3 cp ${{ github.workspace }}/${{ github.sha }}.zip s3://acg-secrets/${{ github.sha }}.zip
