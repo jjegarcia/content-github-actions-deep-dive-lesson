@@ -48,7 +48,7 @@ jobs:
     steps:
       - name: Generate Tag
         run: |
-          SHORT_SHA="${github.sha::7}"
+          SHORT_SHA="${GITHUB_SHA::7}"
           TAG_NAME="v${SHORT_SHA}"
       - name: create release
         id: create-release
