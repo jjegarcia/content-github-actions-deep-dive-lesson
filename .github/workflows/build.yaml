@@ -52,7 +52,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.sha}}  | truncate(7, false, "")
+          tag_name: ${{ github.sha }}:0:7
           release_name: Release ${{ github.sha }}
           body: Automated release
           draft: false
