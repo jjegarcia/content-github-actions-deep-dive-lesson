@@ -120,5 +120,5 @@ jobs:
             aws lambda update-function-code \
               --function-name ${{ secrets.AWS_ACG_LAMBDA_FUNCTION }} \
               --s3-bucket ${{ secrets.S3_BUCKET_NAME }} \
-              --s3-key ${{ github.repository }}/${{ github.sha }}.zip \
+              --s3-key ${{ github.sha }}.zip \
               --publish
