@@ -133,7 +133,7 @@ jobs:
       - name: convert to html
         uses: docker://pandoc/core:2.9
         with:
-          args: docs/userguide.md -o docs/userguide.html
+          args: docs/userguide.md -o docs/index.html
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
